@@ -7,8 +7,6 @@ This microservice handles appointment notifications by validating input data and
 **Communication Contract**
 
 **How to Programmatically Request Data**
-
-
 To request data from the microservice, you need to send a POST request to the /send-notification endpoint.
 
 **Endpoint**
