@@ -9,6 +9,7 @@ This microservice handles appointment notifications by validating input data and
 To request data from the microservice, you need to send a POST request to the /send-notification endpoint.
 
 **Endpoint**
+
 POST http://localhost:5000/send-notification
 
 **Request Format**
@@ -20,13 +21,25 @@ The request payload must be in JSON format and include:
    - time (string): Appointment time in 24-hour HH:MM format.
    - vet_name (string): Name of the veterinarian (letters, spaces, periods, hyphens, and apostrophes allowed).
 
-Example Request Payload
+**Example Request Payload**
+
+{
+    "user_id": "123",
+    "appointment": {
+        "date": "2024-12-01",
+        "time": "10:00",
+        "vet_name": "Dr. Jane Doe"
+    }
+}
+
+**Python Example for Sending Request**
+
 import requests
 
-# Microservice endpoint
+Microservice endpoint
 url = "http://localhost:5000/send-notification"
 
-# Request payload
+Request payload
 data = {
     "user_id": "123",
     "appointment": {
@@ -36,22 +49,23 @@ data = {
     }
 }
 
-# Send POST request
+Send POST request
 response = requests.post(url, json=data)
 
-# Print the response
+Print the response
 print(response.json())
 
-How to Programmatically Receive Data
+**How to Programmatically Receive Data**
 The microservice will respond with structured JSON data indicating the result of the request. The response will be one of the following formats:
 
-Successful Response
+**Successful Response**
 If the request is valid, the response will include:
 - status: "success"
 - message: A confirmation message.
 - appointment_details: Echoes the appointment details sent in the request.
 
-Example:
+**Example Success Response**
+
 {
     "status": "success",
     "message": "Notification sent successfully",
@@ -62,23 +76,24 @@ Example:
     }
 }
 
-Error Response
+**Error Response**
 If the request is invalid, the response will include:
 - status: "error"
 - message: A description of the error.
 
-Example:
+**Example Error Response**
+
 {
     "status": "error",
     "message": "Invalid user_id format"
 }
 
-Example Response Handling in Python
+**Example Response Handling in Python**
 The following Python code demonstrates how to handle the response:
 
 response = requests.post(url, json=data)
 
-# Check response status
+Check response status
 if response.status_code == 200:
     # Success
     print("Success Response:", response.json())
@@ -86,7 +101,7 @@ else:
     # Error
     print("Error Response:", response.json())
 
-UML Sequence Diagram
+**UML Sequence Diagram**
 Below is a UML sequence diagram that explains how requesting and receiving data works between the test program and the microservice:
 
 +------------------+           +-------------------+
@@ -107,19 +122,19 @@ Below is a UML sequence diagram that explains how requesting and receiving data 
         |<-----------------------------|
         |                              |
 
-Notes
+**Notes**
 
-- Starting the Microservice:
+**- Starting the Microservice:**
   - Ensure the microservice is running at http://localhost:5000 before making requests. Start it by running:
     python app.py
 
-- Validation Rules:
+**- Validation Rules:**
   - user_id must be numeric.
   - date must follow the YYYY-MM-DD format.
   - time must follow the HH:MM 24-hour format.
   - vet_name can only contain letters, spaces, periods, hyphens, and apostrophes.
 
-- Error Handling:
+**- Error Handling:**
   - Always check for errors in the response and handle them appropriately in your code.
 
 
