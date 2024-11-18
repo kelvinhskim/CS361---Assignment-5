@@ -1,6 +1,6 @@
 # Appointment Notification Microservice
 
-## Overview
+**Overview**
 
 This microservice handles appointment notifications by validating input data and providing structured responses. It is designed to be accessed programmatically using HTTP POST requests, allowing users to send requests and receive structured JSON responses.
 
