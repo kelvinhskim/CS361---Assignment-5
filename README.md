@@ -109,14 +109,21 @@ The following Python code demonstrates how to handle the response:
 response = requests.post(url, json=data)
 
 #Check response status
+
 if response.status_code == 200:
+    
     # Success
+    
     print("Success Response:", response.json())
+
 else:
+    
     # Error
+    
     print("Error Response:", response.json())
 
 **UML Sequence Diagram**
+
 Below is a UML sequence diagram that explains how requesting and receiving data works between the test program and the microservice:
 
 +------------------+           +-------------------+
