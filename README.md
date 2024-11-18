@@ -12,9 +12,8 @@ To request data from the microservice, you need to send a POST request to the /s
 
 **Endpoint**
 
-POST 
+POST http://localhost:5000/send-notification
 
-http://localhost:5000/send-notification
 
 **Request Format**
 
