@@ -108,7 +108,7 @@ The following Python code demonstrates how to handle the response:
 
 response = requests.post(url, json=data)
 
-Check response status
+#Check response status
 if response.status_code == 200:
     # Success
     print("Success Response:", response.json())
