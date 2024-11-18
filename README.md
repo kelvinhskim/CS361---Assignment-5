@@ -28,6 +28,8 @@ The request payload must be in JSON format and include:
 
 **Example Request Payload**
 ```
+json
+
 {
     "user_id": "123",
     "appointment": {
@@ -39,12 +41,14 @@ The request payload must be in JSON format and include:
 ```
 **Python Example for Sending Request**
 ```
+python
+
 import requests
 
-# Microservice endpoint
+_# Microservice endpoint_
 url = "http://localhost:5000/send-notification"
 
-# Request payload
+_# Request payload_
 data = {
     "user_id": "123",
     "appointment": {
@@ -54,10 +58,10 @@ data = {
     }
 }
 
-# Send POST request
+_# Send POST request_
 response = requests.post(url, json=data)
 
-#Print the response
+_#Print the response_
 print(response.json())
 ```
 
