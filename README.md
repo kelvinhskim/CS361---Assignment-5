@@ -27,7 +27,7 @@ The request payload must be in JSON format and include:
    - vet_name (string): Name of the veterinarian (letters, spaces, periods, hyphens, and apostrophes allowed).
 
 **Example Request Payload**
-
+```
 {
     "user_id": "123",
     "appointment": {
@@ -36,7 +36,7 @@ The request payload must be in JSON format and include:
         "vet_name": "Dr. Jane Doe"
     }
 }
-
+```
 **Python Example for Sending Request**
 
 import requests
