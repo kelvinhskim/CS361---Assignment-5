@@ -41,10 +41,10 @@ The request payload must be in JSON format and include:
 
 import requests
 
-Microservice endpoint
+#Microservice endpoint
 url = "http://localhost:5000/send-notification"
 
-Request payload
+#Request payload
 data = {
     "user_id": "123",
     "appointment": {
