@@ -41,12 +41,10 @@ The request payload must be in JSON format and include:
 ```
 import requests
 
-#Microservice endpoint
-
+# Microservice endpoint
 url = "http://localhost:5000/send-notification"
 
-#Request payload
-
+# Request payload
 data = {
     "user_id": "123",
     "appointment": {
@@ -56,12 +54,10 @@ data = {
     }
 }
 
-#Send POST request
-
+# Send POST request
 response = requests.post(url, json=data)
 
 #Print the response
-
 print(response.json())
 ```
 
