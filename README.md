@@ -117,23 +117,7 @@ else:
 
 Below is a UML sequence diagram that explains how requesting and receiving data works between the test program and the microservice:
 
-+------------------+           +-------------------+
-|  Test Program    |           |    Microservice   |
-+------------------+           +-------------------+
-        |                              |
-        |  POST /send-notification     |
-        |----------------------------->|
-        |                              |
-        | Validate request data        |
-        |------------------------------|
-        |                              |
-        |  If valid, process request   |
-        |  If invalid, return error    |
-        |------------------------------|
-        |                              |
-        |    Response JSON data        |
-        |<-----------------------------|
-        |                              |
+(https://github.com/kelvinhskim/CS361---Pet_Care_Managemet_APP/blob/main/UML%20Sequence%20Diagram.png)
 
 #
 **Notes**
