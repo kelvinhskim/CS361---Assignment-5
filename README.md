@@ -73,8 +73,8 @@ If the request is valid, the response will include:
 - message: A confirmation message.
 - appointment_details: Echoes the appointment details sent in the request.
 
-**Example Success Response**
-
+**json Example Success Response**
+```
 {
     "status": "success",
     "message": "Notification sent successfully",
@@ -84,40 +84,35 @@ If the request is valid, the response will include:
         "vet_name": "Dr. Jane Doe"
     }
 }
-
+```
 **Error Response**
 
 If the request is invalid, the response will include:
 - status: "error"
 - message: A description of the error.
 
-**Example Error Response**
-
+**json Example Error Response**
+```
 {
     "status": "error",
     "message": "Invalid user_id format"
 }
-
+```
 **Example Response Handling in Python**
 
 The following Python code demonstrates how to handle the response:
-
+```
 response = requests.post(url, json=data)
 
 #Check response status
-
 if response.status_code == 200:
-    
     # Success
-    
     print("Success Response:", response.json())
-
 else:
-    
     # Error
-    
     print("Error Response:", response.json())
-
+```
+#
 **UML Sequence Diagram**
 
 Below is a UML sequence diagram that explains how requesting and receiving data works between the test program and the microservice:
@@ -140,12 +135,14 @@ Below is a UML sequence diagram that explains how requesting and receiving data 
         |<-----------------------------|
         |                              |
 
+#
 **Notes**
 
 **- Starting the Microservice:**
   - Ensure the microservice is running at http://localhost:5000 before making requests. Start it by running:
+    ```
     python app.py
-
+    ```
 **- Validation Rules:**
   - user_id must be numeric.
   - date must follow the YYYY-MM-DD format.
@@ -154,5 +151,5 @@ Below is a UML sequence diagram that explains how requesting and receiving data 
 
 **- Error Handling:**
   - Always check for errors in the response and handle them appropriately in your code.
-
+#
 
