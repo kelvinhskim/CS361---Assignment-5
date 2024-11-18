@@ -1,9 +1,9 @@
-# Appointment Notification Microservice
+**Appointment Notification Microservice**
 
 **Overview**
 
 This microservice handles appointment notifications by validating input data and providing structured responses. It is designed to be accessed programmatically using HTTP POST requests, allowing users to send requests and receive structured JSON responses.
-
+#
 **Communication Contract**
 
 **How to Programmatically Request Data**
@@ -26,10 +26,8 @@ The request payload must be in JSON format and include:
    - time (string): Appointment time in 24-hour HH:MM format.
    - vet_name (string): Name of the veterinarian (letters, spaces, periods, hyphens, and apostrophes allowed).
 
-**Example Request Payload**
+**json Example Request Payload**
 ```
-json
-
 {
     "user_id": "123",
     "appointment": {
@@ -41,14 +39,12 @@ json
 ```
 **Python Example for Sending Request**
 ```
-python
-
 import requests
 
-*# Microservice endpoint*
+# Microservice endpoint
 url = "http://localhost:5000/send-notification"
 
-_# Request payload_
+# Request payload
 data = {
     "user_id": "123",
     "appointment": {
@@ -58,13 +54,13 @@ data = {
     }
 }
 
-_# Send POST request_
+# Send POST request
 response = requests.post(url, json=data)
 
-_#Print the response_
+#Print the response
 print(response.json())
 ```
-
+#
 **How to Programmatically Receive Data**
 
 The microservice will respond with structured JSON data indicating the result of the request. The response will be one of the following formats:
