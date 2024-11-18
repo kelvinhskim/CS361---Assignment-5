@@ -45,7 +45,7 @@ python
 
 import requests
 
-_# Microservice endpoint_
+*# Microservice endpoint*
 url = "http://localhost:5000/send-notification"
 
 _# Request payload_
