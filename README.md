@@ -7,6 +7,7 @@ This microservice handles appointment notifications by validating input data and
 **Communication Contract**
 
 **How to Programmatically Request Data**
+
 To request data from the microservice, you need to send a POST request to the /send-notification endpoint.
 
 **Endpoint**
@@ -65,10 +66,12 @@ print(response.json())
 
 
 **How to Programmatically Receive Data**
+
 The microservice will respond with structured JSON data indicating the result of the request. The response will be one of the following formats:
 
 
 **Successful Response**
+
 If the request is valid, the response will include:
 - status: "success"
 - message: A confirmation message.
