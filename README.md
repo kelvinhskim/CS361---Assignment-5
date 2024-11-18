@@ -117,7 +117,7 @@ else:
 
 Below is a UML sequence diagram that explains how requesting and receiving data works between the test program and the microservice:
 
-(https://github.com/kelvinhskim/CS361---Pet_Care_Managemet_APP/blob/main/UML%20Sequence%20Diagram.png)
+![alt text](https://github.com/kelvinhskim/CS361---Pet_Care_Managemet_APP/blob/main/UML%20Sequence%20Diagram.png)
 
 #
 **Notes**
