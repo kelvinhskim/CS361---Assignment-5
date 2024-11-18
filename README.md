@@ -1,10 +1,10 @@
-**Appointment Notification Microservice**
+# **Appointment Notification Microservice**
 
-**Overview**
+## **Overview**
 
 This microservice handles appointment notifications by validating input data and providing structured responses. It is designed to be accessed programmatically using HTTP POST requests, allowing users to send requests and receive structured JSON responses.
 #
-**Communication Contract**
+## **Communication Contract**
 
 **How to Programmatically Request Data**
 
@@ -113,14 +113,14 @@ else:
     print("Error Response:", response.json())
 ```
 #
-**UML Sequence Diagram**
+## **UML Sequence Diagram**
 
 Below is a UML sequence diagram that explains how requesting and receiving data works between the test program and the microservice:
 
 ![alt text](https://github.com/kelvinhskim/CS361---Pet_Care_Managemet_APP/blob/main/UML%20Sequence%20Diagram.png)
 
 #
-**Notes**
+## **Notes**
 
 **- Starting the Microservice:**
   - Ensure the microservice is running at http://localhost:5000 before making requests. Start it by running:
