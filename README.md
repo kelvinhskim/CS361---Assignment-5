@@ -90,6 +90,7 @@ If the request is valid, the response will include:
 }
 
 **Error Response**
+
 If the request is invalid, the response will include:
 - status: "error"
 - message: A description of the error.
@@ -102,6 +103,7 @@ If the request is invalid, the response will include:
 }
 
 **Example Response Handling in Python**
+
 The following Python code demonstrates how to handle the response:
 
 response = requests.post(url, json=data)
