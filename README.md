@@ -1,16 +1,17 @@
-Appointment Notification Microservice
+**Appointment Notification Microservice**
 
-Overview
+**Overview**
+
 This microservice handles appointment notifications by validating input data and providing structured responses. It is designed to be accessed programmatically using HTTP POST requests, allowing users to send requests and receive structured JSON responses.
 
-Communication Contract
-How to Programmatically Request Data
+**Communication Contract**
+**How to Programmatically Request Data**
 To request data from the microservice, you need to send a POST request to the /send-notification endpoint.
 
-Endpoint
+**Endpoint**
 POST http://localhost:5000/send-notification
 
-Request Format
+**Request Format**
 The request payload must be in JSON format and include:
 
 - user_id (string): A numeric identifier for the user.
