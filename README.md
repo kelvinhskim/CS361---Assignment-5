@@ -38,7 +38,7 @@ The request payload must be in JSON format and include:
 }
 ```
 **Python Example for Sending Request**
-
+```
 import requests
 
 #Microservice endpoint
@@ -63,7 +63,7 @@ response = requests.post(url, json=data)
 #Print the response
 
 print(response.json())
-
+```
 
 **How to Programmatically Receive Data**
 
