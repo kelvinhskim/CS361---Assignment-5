@@ -1,0 +1,65 @@
+.homepage-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.auth-section, .dashboard-section {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button {
+  background-color: #4CAF50;
+}
+
+.login-button:hover {
+  background-color: #388E3C;
+}
+
+.logout-button {
+  background-color: #f44336;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.register-link, .my-pet-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.register-link:hover, .my-pet-link:hover {
+  background-color: #1976D2;
+}

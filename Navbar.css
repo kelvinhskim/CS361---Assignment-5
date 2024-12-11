@@ -1,0 +1,174 @@
+/* General navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(76, 175, 80, 0.9); /* Transparent green */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-container.scrolled {
+  background-color: #4CAF50; /* Solid green when scrolled */
+  padding: 10px 20px;
+}
+
+/* Navbar logo */
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-link {
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.navbar-link.active {
+  color: #FFEB3B; /* Gold for active link */
+}
+
+/* Dropdown menu */
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #388E3C;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 150px;
+  text-align: left;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-dropdown:hover .navbar-dropdown-menu {
+  display: block;
+}
+
+.navbar-dropdown-item {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-dropdown-item:hover {
+  background-color: #4CAF50;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(76, 175, 80, 0.95); /* Slightly transparent for mobile */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-link {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .navbar-container {
+    padding: 15px 10px;
+  }
+
+  .navbar-dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Hamburger menu */
+  .navbar-hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  .navbar-hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .navbar-hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    margin-top: 8px;
+  }
+
+  .navbar-hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg);
+    margin-top: -8px;
+  }
+}

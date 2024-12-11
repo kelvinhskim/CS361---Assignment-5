@@ -1,0 +1,122 @@
+/* Task container */
+.routine-task-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.routine-task-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Task title */
+.routine-task-header {
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #4CAF50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* List of routine tasks */
+.routine-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Task item cards */
+.routine-task-item {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.routine-task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Task item details */
+.routine-task-item-details {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.routine-task-item-details span {
+  font-weight: bold;
+  color: #388E3C;
+}
+
+/* Task actions (e.g., buttons or icons) */
+.routine-task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.routine-task-actions button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.routine-task-actions button:hover {
+  background-color: #388E3C;
+  transform: scale(1.05);
+}
+
+.routine-task-actions button:active {
+  background-color: #2E7D32;
+}
+
+/* Mobile-friendly design */
+@media (max-width: 768px) {
+  .routine-task-container {
+    padding: 20px;
+  }
+
+  .routine-task-header {
+    font-size: 1.8rem;
+  }
+
+  .routine-task-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .routine-task-item-details {
+    font-size: 1rem;
+  }
+
+  .routine-task-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,52 @@
+/* Container for the entire Add Appointment page */
+.appointment-container {
+  display: flex;                 /* Use Flexbox for centering */
+  flex-direction: column;        /* Stack items vertically */
+  justify-content: center;       /* Center vertically */
+  align-items: center;           /* Center horizontally */
+  height: 100vh;                 /* Full viewport height */
+  text-align: center;            /* Center text inside elements */
+  background-color: #f9f9f9;     /* Optional background color */
+  font-family: Arial, sans-serif;
+}
+
+/* Form styles */
+.appointment-container form {
+  display: flex;
+  flex-direction: column;        /* Stack form fields vertically */
+  align-items: center;           /* Center align the fields */
+  gap: 15px;                     /* Add space between fields */
+  width: 100%;                   /* Allow responsive width */
+  max-width: 400px;              /* Limit the form width */
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and textarea fields */
+.appointment-container input,
+.appointment-container textarea {
+  width: 100%;                   /* Full width of the form */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Button styles */
+.appointment-container button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-container button:hover {
+  background-color: #45a049;
+}

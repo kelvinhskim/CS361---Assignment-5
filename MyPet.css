@@ -1,0 +1,43 @@
+/* Main container for the My Pet page */
+.mypet-container {
+    display: flex;                 /* Use Flexbox for centering */
+    flex-direction: column;        /* Stack items vertically */
+    justify-content: center;       /* Center vertically */
+    align-items: center;           /* Center horizontally */
+    height: 100vh;                 /* Full viewport height */
+    text-align: center;            /* Center-align text */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;     /* Optional: Light background */
+    padding: 20px;
+  }
+  
+  /* Styling for the information box */
+  .mypet-info {
+    width: 100%;                   /* Full width */
+    max-width: 500px;              /* Limit the max width */
+    background-color: white;       /* White background */
+    padding: 20px;
+    border-radius: 10px;           /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left;              /* Align text inside the box */
+    margin-top: 20px;              /* Space above the info box */
+  }
+  
+  /* Header styles */
+  .mypet-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .mypet-info h3 {
+    margin-top: 0;
+    color: #4CAF50;               /* Optional: Different color for the pet name */
+  }
+  
+  /* Text styles */
+  .mypet-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
